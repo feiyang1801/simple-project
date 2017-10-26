@@ -1,7 +1,6 @@
 
 package cn.gy.serial.hessian;
 
-import cn.gy.model.CutOrderSource;
 import cn.gy.model.UserOrder;
 import com.caucho.hessian.io.Hessian2Input;
 import com.caucho.hessian.io.Hessian2Output;
@@ -28,7 +27,6 @@ public class HessianSerial {
     }
 
     public static void main(String[] args) throws Exception{
-        System.out.println(CutOrderSource.NUMBER.name());
     }
 
 }

@@ -34,7 +34,7 @@ public class App {
             int end = i + 20 > userOrderList.size() ? userOrderList.size() : i + 20;
             List<UserOrder> userOrders = userOrderList.subList(i, end);
             data.put("data", userOrders);
-            System.out.println(objectMapper.writeValueAsString(data);
+            System.out.println(objectMapper.writeValueAsString(data));
             i += 20;
         }
 
