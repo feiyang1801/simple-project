@@ -13,7 +13,7 @@ import java.net.Socket;
 public class Sender {
 
     public static void main(String[] args) throws Exception{
-        Socket socket = new Socket("10.86.36.109",2233);
+        Socket socket = new Socket("127.0.0.1",8081);
         BufferedReader sin = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter os = new PrintWriter(socket.getOutputStream());
         BufferedReader is = new BufferedReader(new InputStreamReader(socket.getInputStream()));

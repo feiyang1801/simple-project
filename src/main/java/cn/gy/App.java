@@ -25,7 +25,7 @@ public class App {
         while ((temp = br.readLine()) != null) {
             String[] params = temp.split(",");
 //            UserOrder userOrder = new UserOrder(params[0].trim(),Long.valueOf(params[1].trim()));
-            UserOrder userOrder = new UserOrder(params[1].trim(), Long.valueOf(params[0].trim()));
+            UserOrder userOrder = new UserOrder(params[0].trim(), Long.valueOf(params[1].trim()));
             userOrderList.add(userOrder);
         }
         Map<String, List<UserOrder>> data = new HashMap<String, List<UserOrder>>();
