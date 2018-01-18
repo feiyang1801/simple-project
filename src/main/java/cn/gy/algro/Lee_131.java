@@ -26,12 +26,24 @@ public class Lee_131 {
 
     private static List<List<String>> palindList(String s, int i, int j) {
         List<List<String>> retList = new ArrayList<>();
+        if (i == j) {
+            List<String> subs = new ArrayList<>();
+            subs.add(s.substring(i, i + 1));
+            retList.add(subs);
+            return retList;
+        }
         for (int k = i; k <= j; k++) {
             if (isPalindrome(s, i, k)) {
-                List<List<String>> subRetList = palindList(s, k + 1, j);
-                for (List<String> list : subRetList) {
-                    list.add(s.substring(i, k + 1));
-                    retList.add(list);
+                if (k == j) {
+                    List<String> subs = new ArrayList<>();
+                    subs.add(s.substring(i, k + 1));
+                    retList.add(subs);
+                } else {
+                    List<List<String>> subRetList = palindList(s, k + 1, j);
+                    for (List<String> list : subRetList) {
+                        list.add(0, s.substring(i, k + 1));
+                        retList.add(list);
+                    }
                 }
             }
         }
@@ -50,7 +62,7 @@ public class Lee_131 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Lee_131().partition("abc"));
+        System.out.println(new Lee_131().partition("aba"));
     }
 
 }
