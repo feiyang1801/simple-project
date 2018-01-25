@@ -15,8 +15,8 @@ import java.util.concurrent.Executors;
 public class Test {
 
     public static void main(String[] args) {
-
-        System.out.println(new BigDecimal(30).multiply(BigDecimal.ZERO));
+        StringBuilder sb = new StringBuilder();
+        System.out.println(sb.toString());
     }
 
 
